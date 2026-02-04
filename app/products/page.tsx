@@ -1,5 +1,4 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -100,7 +99,7 @@ const productCategories = [
 const Products = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      
       
       {/* Hero Section */}
       <section className="pt-28 pb-12 md:pt-36 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
@@ -283,7 +282,6 @@ const Products = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

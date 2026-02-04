@@ -8,20 +8,20 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 ">
             {/* <h3 className="text-3xl font-display font-bold text-white mb-4">
               StreeDhana
             </h3>
             <p className="text-white/70 mb-6 max-w-md">
               Smart Mutual Fund For Big Dreams
             </p> */}
-            <a href="/" className="flex items-center gap-2">
+            <a href="/" className="flex items-center mb-10">
               <Image
-                src="/logo.png"      
+                src="/logo.jpeg"      
                 alt="StreeDhana Logo"
                 width={200}
                 height={180}
-                className="rounded-full" 
+                className="rounded-xl" 
               />
             </a>
             

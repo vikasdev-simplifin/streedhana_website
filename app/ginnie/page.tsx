@@ -24,7 +24,7 @@ import {
 const MutualFundSakhiGinnie = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+
       
       {/* Hero Section */}
       <section className="pt-28 pb-12 md:pt-36 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
@@ -625,7 +625,6 @@ const MutualFundSakhiGinnie = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

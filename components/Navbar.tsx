@@ -15,7 +15,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toolItems = [
-    "Free AI Investment Calculators",
+    {
+    label: "Free AI Investment Calculators",
+    href: "/aitools",
+  },
   ];
 
   return (
@@ -57,8 +60,10 @@ const Navbar = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-64">
                 {toolItems.map((item) => (
-                  <DropdownMenuItem key={item} className="cursor-pointer py-3">
-                    {item}
+                  <DropdownMenuItem key={item.label} asChild>
+                    <Link href={item.href} className="w-full py-3">
+                      {item.label}
+                    </Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -104,13 +109,14 @@ const Navbar = () => {
               <div className="px-2">
                 <p className="text-sm font-semibold text-muted-foreground mb-2">Tools</p>
                 {toolItems.map((item) => (
-                  <a
-                    key={item}
-                    href="#"
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
                     className="block py-2 text-foreground/80 hover:text-primary transition-colors"
                   >
-                    {item}
-                  </a>
+                    {item.label}
+                  </Link>
                 ))}
               </div>
               <a href="/#faq" className="px-2 py-2 text-foreground/80 hover:text-primary transition-colors">
