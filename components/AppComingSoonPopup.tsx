@@ -8,7 +8,7 @@ export default function AppComingSoonPopup() {
   useEffect(() => {
     const interval = setInterval(() => {
       setOpen(true);
-    }, 30000); 
+    }, 60000); 
 
     return () => clearInterval(interval);
   }, []);
