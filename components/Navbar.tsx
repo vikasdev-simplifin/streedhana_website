@@ -52,7 +52,7 @@ const Navbar = () => {
               href="/ginnie"
               onClick={() => setIsOpen(false)}
               className="text-foreground/80 hover:text-primary transition-colors font-medium">
-              Mutual Fund Sakhi/Ginnie
+              MF Sakhi/Ginnie
             </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-foreground/80 hover:text-primary transition-colors font-medium">

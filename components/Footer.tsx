@@ -17,11 +17,11 @@ const Footer = () => {
             </p> */}
             <a href="/" className="flex items-center mb-10">
               <Image
-                src="/logo.jpeg"      
+                src="/logo-1.png"      
                 alt="StreeDhana Logo"
                 width={200}
                 height={180}
-                className="rounded-xl" 
+                className="rounded-lg"
               />
             </a>
             
