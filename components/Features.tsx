@@ -70,11 +70,11 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group bg-background border border-border rounded-2xl p-8 hover:shadow-large transition-all duration-500 hover:-translate-y-1"
+              className="group bg-background border border-border rounded-2xl p-8 cursor-pointer hover:shadow-lg transition-all duration-500 hover:-translate-y-1"
               style={{ animationDelay: `${0.1 * index}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-coral-light flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
-                <feature.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              <div className="w-14 h-14 rounded-xl bg-coral-light flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+                <feature.icon className="w-7 h-7 text-primary group-hover:text-secondary-foreground transition-colors duration-300" />
               </div>
               
               <h3 className="text-xl font-display font-bold text-foreground mb-3">

@@ -2,9 +2,9 @@
 
 :root {
   /* --background: #ffffff; --foreground: #171717; */
-  --background: 30 50% 98%;
+  /* --background: 30 50% 98%;
   --foreground: 200 30% 15%;
-  --card: 0 0% 100%;
+  --card: 0 0% 100%; */
   --background: 30 50% 98%;
   --foreground: 200 30% 15%;
   --card: 0 0% 100%;
@@ -12,7 +12,7 @@
   --popover: 0 0% 100%;
   --popover-foreground: 200 30% 15%;
   /* Primary - Warm Coral Pink */
-  --primary: 195 59% 40%;
+  --primary: 190 75% 24%;
   --primary-foreground: 0 0% 100%;
   /* Secondary - Soft Teal */
   --secondary: 200 50% 25%;
@@ -88,6 +88,10 @@
   }
 }
 
+.border-primary{
+  border-color: hsl(var(--primary));
+}
+
 .bg-primary {
   background-color: hsl(var(--primary));
 }
@@ -97,9 +101,7 @@
 }
 
 @layer base {
-  * {
-    border-color: hsl(var(--border));
-  }
+  
 
   body {
     background-color: hsl(var(--background));
@@ -140,9 +142,6 @@
   }
 }
 
-* {
-  border-color: hsl(var(--border));
-}
 
 /* body { background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; } */
 .animate-scroll-right {
@@ -174,6 +173,21 @@
 }
 
 @layer utilities {
+  .shadow-soft {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-large {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .hover-shadow-soft:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .hover-shadow-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
   .bg-gradient-hero {
     background: var(--gradient-hero);
   }

@@ -1,4 +1,3 @@
-import AppComingSoonPopup from "@/components/AppComingSoonPopup";
 import FAQ from "@/components/FAQ";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
@@ -19,7 +18,6 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <TrustBadges />
-      <AppComingSoonPopup />
     </div>
   );
 }

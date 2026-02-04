@@ -52,7 +52,7 @@ const Testimonials = () => {
 
       {/* Scrolling testimonials */}
       <div 
-        className="relative pause-on-hover"
+        className="relative pause-on-hover cursor-pointer"
       >
         <div className={`flex gap-6 animate-scroll-left`}>
           {/* Double the testimonials for seamless loop */}

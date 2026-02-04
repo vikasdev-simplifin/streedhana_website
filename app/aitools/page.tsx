@@ -1,4 +1,5 @@
 "use client";
+import HeroBanner from "@/components/HeroBanner";
 import ToolCard from "@/components/ToolCard";
 import {
   MessageSquare,
@@ -72,6 +73,7 @@ const tools = [
 const AITools = () => {
   return (
     <div className="min-h-screen bg-background mt-24">
+      <HeroBanner />
 
       {/* Tools Grid Section */}
       <section className="container mx-auto px-4 py-12 md:py-16">

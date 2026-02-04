@@ -36,7 +36,7 @@ const Hero = () => {
             <img
               src="/hero-illustration.jpg"
               alt="Women-focused financial investment platform"
-              className="w-full max-w-4xl mx-auto rounded-2xl shadow-lg"
+              className="w-full max-w-4xl mx-auto rounded-2xl shadow-soft hover-shadow-soft transition-shadow duration-300"
             />
           </div>
 
@@ -61,8 +61,9 @@ const Hero = () => {
                   duration-300
                   ease-out
 
-                  md:hover:border-primary
-                  md:hover:shadow-glow
+                  hover:border-primary                 
+                  hover:shadow-glow
+                  shadow-soft
                   md:hover:-translate-y-1
                 "
                 style={{ animationDelay: `${0.1 * index}s` }}

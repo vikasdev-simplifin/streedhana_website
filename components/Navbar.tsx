@@ -28,11 +28,11 @@ const Navbar = () => {
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
             <Image
-              src="/logo.png"      
+              src="/finallogo.png"      
               alt="StreeDhana Logo"
-              width={200}
-              height={180}
-              className="rounded-full" 
+              width={160}
+              height={130}
+              className="mb-8" 
             />
             {/* <span className="text-2xl md:text-3xl font-display font-bold text-primary">
               StreeDhana

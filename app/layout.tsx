@@ -4,6 +4,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AppComingSoonPopup from "@/components/AppComingSoonPopup";
 
 
 const geistSans = Geist({
@@ -44,6 +45,7 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} antialiased`}
       >
         <Navbar />
+        <AppComingSoonPopup />
         {children}
         <Footer />
       </body>

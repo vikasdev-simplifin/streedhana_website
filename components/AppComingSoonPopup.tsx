@@ -3,22 +3,17 @@
 import { useEffect, useState } from "react";
 
 export default function AppComingSoonPopup() {
-  const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const alreadyShown = localStorage.getItem("appPopupShown");
+    const interval = setInterval(() => {
+      setOpen(true);
+    }, 30000); 
 
-    if (alreadyShown) return;
-
-    const timer = setTimeout(() => {
-      setShow(true);
-      localStorage.setItem("appPopupShown", "true");
-    }, 60000); 
-
-    return () => clearTimeout(timer);
+    return () => clearInterval(interval);
   }, []);
 
-  if (!show) return null;
+  if (!open) return null;
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60">
@@ -28,7 +23,7 @@ export default function AppComingSoonPopup() {
           Our mobile app is launching soon. Stay tuned!
         </p>
         <button
-          onClick={() => setShow(false)}
+          onClick={() => setOpen(false)}
           className="bg-primary text-white px-4 py-2 rounded-lg"
         >
           Close
