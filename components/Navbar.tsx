@@ -32,7 +32,7 @@ const Navbar = () => {
               alt="StreeDhana Logo"
               width={160}
               height={130}
-              className="mb-8" 
+              className="object-contain" 
             />
             {/* <span className="text-2xl md:text-3xl font-display font-bold text-primary">
               StreeDhana
@@ -55,10 +55,10 @@ const Navbar = () => {
               MF Sakhi/Ginnie
             </Link>
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground/80 hover:text-primary transition-colors font-medium">
+              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground/80 hover:text-primary transition-colors font-medium overflow-visible">
                 Tools <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-64">
+              <DropdownMenuContent align="start" side="bottom" sideOffset={10} className="w-64 rounded-xl border bg-popover shadow-lg z-50">
                 {toolItems.map((item) => (
                   <DropdownMenuItem key={item.label} asChild>
                     <Link href={item.href} className="w-full py-3">
