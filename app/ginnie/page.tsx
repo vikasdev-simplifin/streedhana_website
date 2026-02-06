@@ -30,10 +30,10 @@ const MutualFundSakhiGinnie = () => {
       <section className="pt-28 pb-12 md:pt-36 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
               Mutual Fund <span className="text-primary">Sakhi</span> / <span className="text-accent">Ginnie</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary font-medium italic">
+            <p className="text-base sm:text-lg md:text-2xl text-primary font-medium italic">
               "Two Roles. One Mission — Women's Financial Empowerment."
             </p>
           </div>
@@ -42,8 +42,8 @@ const MutualFundSakhiGinnie = () => {
 
       {/* Two Card Layout */}
       <section className="py-6 md:py-8">
-        <div className="container mx-auto px-24">
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 lg:gap-8">
             {/* Sakhi Card */}
             <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-background hover:shadow-xl transition-all duration-300">
               <CardHeader className="text-center pb-4">
@@ -141,8 +141,8 @@ const MutualFundSakhiGinnie = () => {
       <section className="py-12 md:py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="sakhi" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10">
-              <TabsTrigger value="sakhi" className="text-sm md:text-base
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 gap-2 mb-8">
+              <TabsTrigger value="sakhi" className="text-xs sm:text-sm md:text-base py-2
                 data-[state=active]:bg-white
                 data-[state=active]:text-foreground
                 data-[state=active]:shadow-sm
@@ -150,7 +150,7 @@ const MutualFundSakhiGinnie = () => {
                 <Heart className="w-4 h-4 mr-2" />
                 Become a Sakhi
               </TabsTrigger>
-              <TabsTrigger value="ginnie" className="text-sm md:text-base
+              <TabsTrigger value="ginnie" className="text-xs sm:text-sm md:text-base py-2
                 data-[state=active]:bg-white
                 data-[state=active]:text-foreground
                 data-[state=active]:shadow-sm

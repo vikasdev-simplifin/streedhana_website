@@ -61,6 +61,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Links</h4>
             <div className="space-y-4">
+              
               <Link
                 href="/privacy-policy"
                 className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
@@ -70,11 +71,17 @@ const Footer = () => {
               </Link>
           
               <Link
-                href="/terms&conditions"
+                href="/terms-and-conditions"
                 className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
               >
                 <FileText className="w-5 h-5" />
                 Terms & Conditions
+              </Link>
+              <Link
+                href="/sitemap.xml"
+                className="text-muted-foreground hover:text-primary transition"
+              >
+                Sitemap
               </Link>
             </div>
           </div>

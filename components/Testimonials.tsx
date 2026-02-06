@@ -2,6 +2,21 @@
 import { useEffect, useState } from "react";
 import { Star } from "lucide-react";
 
+type Testimonial = {
+  name: string;
+  avatar: string;
+  text: string;
+  rating: number;
+};
+
+const splitIntoColumns = <T,>(arr: T[], cols: number): T[][] => {
+  const result: T[][] = Array.from({ length: cols }, () => []);
+  arr.forEach((item, i) => {
+    result[i % cols].push(item);
+  });
+  return result;
+};
+
 const testimonials = [
   {
     name: "Saran Vashisht",
@@ -36,6 +51,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const columns = splitIntoColumns(testimonials, 3);
 
   return (
     <section className="py-20 bg-card overflow-hidden">
@@ -48,34 +64,58 @@ const Testimonials = () => {
             If they can do it, so can you!
           </p>
         </div>
-      </div>
-
-      {/* Scrolling testimonials */}
-      <div 
-        className="relative pause-on-hover cursor-pointer"
-      >
-        <div className={`flex gap-6 animate-scroll-left`}>
-          {/* Double the testimonials for seamless loop */}
-          {[...testimonials, ...testimonials].map((testimonial, index) => (
+      
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {columns.map((column, colIndex) => (
             <div
-              key={`${testimonial.name}-${index}`}
-              className="flex-shrink-0 w-[400px] bg-background border border-border rounded-2xl p-6 hover:shadow-medium transition-shadow"
+              key={colIndex}
+              className="relative h-[400px] overflow-hidden"
             >
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+              <div
+                className={`
+                  space-y-6
+                  will-change-transform
+                  pause-on-hover
+                  ${
+                    colIndex === 1
+                      ? "animate-scroll-down"
+                      : "animate-scroll-up"
+                  }
+                `}
+              >
+                {[...column, ...column].map((testimonial, i) => (
+                  <div
+                    key={`${testimonial.name}-${i}`}
+                    className="bg-background border border-border rounded-2xl p-4 shadow-sm"
+                  >
+                    {/* Stars */}
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, j) => (
+                        <Star
+                          key={j}
+                          className="w-4 h-4 fill-accent text-accent"
+                        />
+                      ))}
+                    </div>
+
+                    {/* Text */}
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      “{testimonial.text}”
+                    </p>
+
+                    {/* Author */}
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <span className="text-sm font-semibold text-primary">
+                          {testimonial.avatar}
+                        </span>
+                      </div>
+                      <span className="font-semibold text-foreground">
+                        {testimonial.name}
+                      </span>
+                    </div>
+                  </div>
                 ))}
-              </div>
-              
-              <p className="text-muted-foreground mb-6 line-clamp-4">
-                "{testimonial.text}"
-              </p>
-              
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-coral-light flex items-center justify-center">
-                  <span className="text-sm font-semibold text-primary">{testimonial.avatar}</span>
-                </div>
-                <span className="font-semibold text-foreground">{testimonial.name}</span>
               </div>
             </div>
           ))}

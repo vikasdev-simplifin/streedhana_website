@@ -1,13 +1,10 @@
 "use client";
 
-export default function TermsAndConditionsPage() {
-  return (
-    <main className="bg-background text-foreground">
-      <section className="max-w-5xl mx-auto px-4 py-16 mt-10">
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-primary mb-8">
-          Terms & Conditions
-        </h1>
+export default function DistributorTerms() {
 
+    return (
+      <main className="bg-background text-foreground">
+      <section className="max-w-5xl mx-auto px-4 py-16 mt-10">
         <div className="space-y-10 text-sm md:text-base leading-relaxed text-muted-foreground">
           {/* About */}
           <section className="space-y-4">
@@ -75,7 +72,7 @@ export default function TermsAndConditionsPage() {
               </li>
               <li>You agree to provide <b>true, accurate, and complete information,</b> including personal, financial, and KYC details, wherever required.</li>
               <li>You are responsible for maintaining the <b>confidentiality of your login credentials </b>and for all activities carried out through your account</li>
-              <li>4.	You must immediately notify StreeDhana of any <b>unauthorised access or security breach</b> of your account.</li>
+              <li>You must immediately notify StreeDhana of any <b>unauthorised access or security breach</b> of your account.</li>
             </ul>
           </section>
 
@@ -98,10 +95,10 @@ export default function TermsAndConditionsPage() {
     
               <li>Any financial transaction facilitated through the Website shall be made only from the user’s own verified bank account.</li>
               <li>You confirm that such transactions comply with:
-                <ul>1.  Income Tax Act</ul>
-                <ul>2.  Prevention of Money Laundering Act</ul>
-                <ul>3.  SEBI / AMFI regulations</ul>
-                <ul>4.  Any other applicable laws</ul>
+                <ul className="list-disc pl-6 space-y-2">1.  Income Tax Act</ul>
+                <ul className="list-disc pl-6 space-y-2">2.  Prevention of Money Laundering Act</ul>
+                <ul className="list-disc pl-6 space-y-2">3.  SEBI / AMFI regulations</ul>
+                <ul className="list-disc pl-6 space-y-2">4.  Any other applicable laws</ul>
               </li>
           </section>
 
@@ -112,17 +109,19 @@ export default function TermsAndConditionsPage() {
               1.	All content, tools, and services on the Website are provided on an “as-is” and “as-available” basis.</p>
               <p>2.	StreeDhana and NextStep Financials expressly disclaim all warranties, whether express or implied, including merchantability, fitness for a particular purpose, accuracy, or non-infringement.</p>
                 <ul >3.	The Website does not guarantee:
-                    <li>Achievement of financial goals</li>
-                    <li>Accuracy of projections</li>
-                    <li>Protection from market risks</li>
-                    <li>Tax efficiency or regulatory outcomes</li>
+                    <ul className="list-disc pl-6 space-y-2">
+                        <li >Achievement of financial goals</li>
+                        <li>Accuracy of projections</li>
+                        <li>Protection from market risks</li>
+                        <li>Tax efficiency or regulatory outcomes</li>
+                    </ul>
                 </ul>
               4.	All investments are subject to market risks.
               <p>StreeDhana, NextStep Financials, or associated partners shall not be liable for any losses, direct or indirect, arising from investment decisions made by the user.
             </p>
           </section>
 
-          <section className="space-y-4 mb-4">
+          <section className=" mt-4 space-y-4 mb-4">
             <h2 className="text-xl font-semibold text-foreground">Risk Profiling & Planning Tools</h2>
                <li>Risk profiling and goal planning tools are software-driven, based on user inputs and assumptions.</li>
                <li>Outputs are indicative and illustrative, and users are free to modify assumptions.</li>
@@ -130,7 +129,7 @@ export default function TermsAndConditionsPage() {
                <li>Users are encouraged to seek advice from SEBI-registered advisors before making any financial decision.</li>
           </section>
 
-          <section className="space-y-4 mb-4">
+          <section className="mt-4 space-y-4 mb-4">
             <h2 className="text-xl font-semibold text-foreground">User Declarations</h2>
              <p>
                 By using the Website, you confirm that:
@@ -141,7 +140,7 @@ export default function TermsAndConditionsPage() {
           </section>
 
           {/* IP */}
-          <section className="space-y-4 mb-4">
+          <section className="mt-4 space-y-4">
             <h2 className="text-xl font-semibold text-foreground">Intellectual Property</h2>
             <p className="mb-2">All content, design, tools, and software on the Website are the intellectual property of StreeDhana / NextStep Financials or its authorised partners and are protected under applicable laws.</p>
 
@@ -149,7 +148,7 @@ export default function TermsAndConditionsPage() {
           </section>
 
           {/* Law */}
-          <section className="space-y-4">
+          <section className="mt-4 space-y-4">
             <h2 className="text-xl font-semibold text-foreground">Governing Law</h2>
             <p className="mb-2">
               These Terms & Conditions shall be governed by and construed in accordance with the <b>laws of India</b>, and courts having jurisdiction shall have exclusive authority.
@@ -157,13 +156,15 @@ export default function TermsAndConditionsPage() {
           </section>
 
           {/* Disclaimer */}
-          <section className="border-t pt-6 text-xs text-muted-foreground">
+          <section className="mt-4 border-t pt-6 text-xs text-muted-foreground">
             <p>
               Mutual fund investments are subject to market risks. Please read all scheme related documents carefully. Risk profiling and goal planning tools are indicative and do not constitute investment advice.
             </p>
           </section>
         </div>
+           
       </section>
     </main>
-  );
+    )
 }
+

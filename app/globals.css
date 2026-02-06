@@ -130,6 +130,8 @@
   --color-muted-foreground: hsl(var(--muted-foreground));
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
   --color-navy: hsl(var(--navy));
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -170,6 +172,36 @@
   100% {
     transform: translateX(0);
   }
+}
+
+@keyframes scroll-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-up {
+  animation: scroll-up 40s linear infinite;
+}
+
+.animate-scroll-down {
+  animation: scroll-down 40s linear infinite;
+}
+
+.pause-on-hover:hover {
+  animation-play-state: paused;
 }
 
 @layer utilities {
