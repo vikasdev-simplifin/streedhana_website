@@ -9,7 +9,7 @@ const goalCards = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-hero pt-24 pb-16 mt-6 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-hero pt-24 pb-16 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
