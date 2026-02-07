@@ -226,7 +226,6 @@ const Navbar = () => {
                     >
                       <div className="flex flex-col">
                         <span className="font-medium">{item.label}</span>
-                        <span className="text-xs text-gray-500 mt-1">Plan your financial future</span>
                       </div>
                     </Link>
                   ))}
