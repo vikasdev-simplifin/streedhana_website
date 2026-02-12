@@ -1,6 +1,7 @@
 import FAQ from "@/components/FAQ";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
+import HeroSection from "@/components/HeroSection";
 import PortfolioAnalyser from "@/components/PortfolioAnalyser";
 import SmartTools from "@/components/SmartTools";
 import Testimonials from "@/components/Testimonials";
@@ -11,7 +12,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       
-      <Hero />
+      {/* <Hero /> */}
+      <HeroSection />
       <Features />
       <SmartTools />
       <PortfolioAnalyser />

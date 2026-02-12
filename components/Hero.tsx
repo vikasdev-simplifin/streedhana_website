@@ -18,8 +18,8 @@ const Hero = () => {
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12 animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
-              <span className="text-primary">Women-First</span> Mutual Fund
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4 text-gradient">
+              <span className="">Women-First</span> Mutual Fund
               <br />
               Distribution Platform
             </h1>

@@ -63,7 +63,7 @@ const Testimonials = () => {
     <section className="py-20 bg-card overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4 text-gradient">
             Trusted & Loved by Indian Women
           </h2>
           <p className="text-xl text-primary font-semibold">

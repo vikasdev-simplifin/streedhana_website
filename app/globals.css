@@ -75,7 +75,15 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: "Inter", system-ui, sans-serif;
+    /* font-family: "Inter", system-ui, sans-serif; */
+      font-family:
+        ui-sans-serif,
+        system-ui,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
   }
 
   h1,
@@ -84,7 +92,15 @@
   h4,
   h5,
   h6 {
-    font-family: "Playfair Display", "Georgia", serif;
+    /* font-family: "Playfair Display", "Georgia", serif; */
+      font-family:
+        ui-sans-serif,
+        system-ui,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
   }
 }
 
@@ -237,6 +253,7 @@
 }
 
 
+
 @layer utilities {
   .shadow-soft {
     box-shadow: var(--shadow-sm);
@@ -378,4 +395,46 @@ html {
 
 .read-the-docs {
   color: #888;
+}
+.text-gradient {
+  display: inline-block;
+  background: linear-gradient(135deg, #0a4076, #11d4c4);
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gradient {
+   background: linear-gradient(135deg, #0a4076, #11d4c4);
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Normal dot */
+.swiper-pagination-bullet {
+  background-color: #94a3b8;
+  /* gray */
+  opacity: 1;
+}
+
+/* Active dot */
+.swiper-pagination-bullet-active {
+  background-color: #3b82f6;
+  /* blue-500 */
+}
+
+
+.swiper-wrapper {
+  width: 100% !important;
+}
+
+.swiper-slide {
+  width: 100% !important;
+  flex-shrink: 0 !important;
 }

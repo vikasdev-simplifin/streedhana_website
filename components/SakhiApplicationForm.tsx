@@ -102,7 +102,7 @@ const SakhiApplicationForm = ({ trigger }: SakhiApplicationFormProps) => {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         {trigger || (
-          <Button size="lg" className="bg-primary hover:bg-primary/90">
+          <Button variant='gredient' size="lg" >
             <FileText className="w-5 h-5 mr-2" />
             Apply to Become a Sakhi
           </Button>
@@ -116,7 +116,12 @@ const SakhiApplicationForm = ({ trigger }: SakhiApplicationFormProps) => {
             </div>
             <div>
               <DialogTitle className="text-xl font-display text-primary ">
-                🌸 Mutual Fund Sakhi – Application Form
+
+                🌸
+                <span className="text-gradient">
+
+                  Mutual Fund Sakhi – Application Form
+                </span>
               </DialogTitle>
               <DialogDescription>
                 Join our mission to empower women through financial literacy
@@ -474,7 +479,7 @@ const SakhiApplicationForm = ({ trigger }: SakhiApplicationFormProps) => {
               />
             </div>
 
-            <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
+            <Button variant="gredient" type="submit" size="lg" className="w-full ">
               Submit Application
             </Button>
           </form>
