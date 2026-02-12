@@ -85,11 +85,11 @@ export default function AboutPage(): JSX.Element {
   return (
     <main className="bg-background text-foreground">
 
-      <section className="pt-28 pb-12 md:pt-24 md:pb-16 bg-backgound shadow-soft text-center">
+      <section className="pt-14 pb-12 md:pt-24 md:pb-16 bg-backgound shadow-soft text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gradient mb-6"
         >
           Women-First Mutual Fund Distribution Platform
         </motion.h1>
@@ -131,7 +131,7 @@ export default function AboutPage(): JSX.Element {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-semibold text-center mb-12 text-primary">
+        <h2 className="text-4xl font-semibold mb-12 text-gradient">
           What We Do 
         </h2>
       
