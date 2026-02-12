@@ -25,42 +25,54 @@ const logos = [
 
 const TrustBadges = () => {
   return (
-    <section className="py-8 bg-primary overflow-hidden">
-      {/* Left to Right */}
-      <div className="mb-8 relative">
-        <div className="flex gap-12 animate-scroll-right">
-          {[...badges, ...badges, ...badges].map((badge, index) => (
+    
+    <section className="relative py-8 bg-primary overflow-hidden">
+
+      {/* Left Fade */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-10 md:w-52 bg-gradient-to-r from-primary to-transparent z-10" />
+
+      {/* Right Fade */}
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-10 md:w-52 bg-gradient-to-l from-primary to-transparent z-10" />
+
+      {/* Badges */}
+      <div className="overflow-hidden">
+        <div className="flex w-max animate-scroll-right">
+          {[...badges, ...badges].map((badge, index) => (
             <div
               key={`ltr-${index}`}
-              className="flex items-center gap-2 whitespace-nowrap cursor-pointer border-border border-primary"
-            >
-              <span className="text-xl">{badge.emoji}</span>
-              <span className="text-primary-foreground font-medium">{badge.text}</span>
-            </div>
-          ))}
+          className="flex items-center gap-2 whitespace-nowrap px-6"
+        >
+          <span className="text-xl">{badge.emoji}</span>
+          <span className="text-primary-foreground font-medium">
+            {badge.text}
+          </span>
+        </div>
+      ))}
         </div>
       </div>
 
-      {/* Right to Left */}
-      <div className="mt-4 relative">
-        <div className="flex items-center gap-10 animate-scroll-left">
-          {[...logos, ...logos, ...logos].map((logo, index) => (
+      {/* Logos */}
+      <div className="overflow-hidden mt-6">
+        <div className="flex w-max animate-scroll-left">
+          {[...logos, ...logos].map((logo, index) => (
             <div
               key={`logo-${index}`}
-              className="flex items-center justify-center min-w-[100px] cursor-pointer"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={60}
-                height={30}
-                className="object-contain rounded-xl"
-              />
-            </div>
-          ))}
+          className="flex items-center justify-center min-w-[140px] px-8 shrink-0"
+        >
+          <Image
+            src={logo.src}
+            alt={logo.alt}
+            width={60}
+            height={30}
+            className="object-contain rounded-xl"
+          />
+        </div>
+      ))}
         </div>
       </div>
+
     </section>
+
   );
 };
 

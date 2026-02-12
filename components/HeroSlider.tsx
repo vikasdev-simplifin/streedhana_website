@@ -68,11 +68,11 @@ import "swiper/css/pagination";
 import Image from "next/image";
 
 const slides = [
-  "/hero-illustration.jpg",
-  "/hero-illustration.jpg",
-  "/hero-illustration.jpg",
-  "/hero-illustration.jpg",
-  "/hero-illustration.jpg",
+  "/banner1.png",
+  "/banner2.png",
+  "/banner3.png",
+  "/banner4.png",
+  "/banner5.png",
 ];
 
 export default function HeroSlider() {
