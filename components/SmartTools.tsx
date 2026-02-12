@@ -48,16 +48,47 @@ const SmartTools = () => {
           {tools.map((tool, index) => (
             <div
               key={tool.title}
-              className="group relative bg-card border border-border rounded-2xl p-8 hover:border-primary hover:shadow-glow transition-all duration-500"
+              // className="group relative bg-card border border-border rounded-2xl p-8 hover:border-primary hover:shadow-glow transition-all duration-500"
+              className="
+  group relative
+  bg-card
+  border border-border
+  rounded-2xl p-8
+  hover:border-primary
+  hover:shadow-glow
+  transition-colors duration-300
+"
+
             >
               <div className="absolute top-4 right-4 text-3xl opacity-20 group-hover:opacity-40 transition-opacity">
                 {tool.emoji}
               </div>
               
-              <div className="w-14 h-14 rounded-xl bg-teal-light flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+              {/* <div className="w-14 h-14 rounded-xl bg-teal-light flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
                 <tool.icon className="w-7 h-7 text-secondary group-hover:text-secondary-foreground transition-colors duration-300" />
+              </div> */}
+
+              <div
+                className="
+                    w-14 h-14 rounded-xl
+                    bg-teal-light
+                    flex items-center justify-center mb-6
+                    transition-all duration-300
+                    group-hover:bg-gradient-to-br
+                    group-hover:from-[#0a4076]
+                    group-hover:to-[#11d4c4]
+                  "
+              >
+                <tool.icon
+                  className="
+                    w-7 h-7
+                    text-secondary
+                    transition-colors duration-300
+                    group-hover:text-white
+                  "
+                />
               </div>
-              
+
               <h3 className="text-xl font-display font-bold text-foreground mb-3">
                 {tool.title}
               </h3>

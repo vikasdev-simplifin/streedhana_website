@@ -105,8 +105,8 @@ const Products = () => {
       <section className="pt-28 pb-12 md:pt-36 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gradient mb-6">
-              Our Products
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
+              Our <span className="text-primary">Products</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
               Explore our range of financial products designed specifically for women to achieve their dreams
@@ -162,7 +162,7 @@ const Products = () => {
             {/* Mutual Fund Portfolios Tab */}
             <TabsContent value="portfolios" className="space-y-8">
               <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-display font-bold text-gradient mb-3">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-3">
                   Mutual Fund Portfolios
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -205,7 +205,7 @@ const Products = () => {
             {/* Goal Based Investing Tab */}
             <TabsContent value="goals" className="space-y-8">
               <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-display font-bold text-gradient mb-3">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-3">
                   Goal Based Mutual Fund Investment
                 </h2>
                 <p className="text-lg text-primary font-medium mb-2">
@@ -250,7 +250,7 @@ const Products = () => {
                             <Button 
                               size="sm" 
                               variant={plan.recommended ? "default" : "outline"}
-                              className={plan.recommended ? "" : "border-primary text-primary hover:bg-primary hover:text-primary-foreground"}
+                              className={plan.recommended ? "" : "border-primary text-primary hover:bg-primary hover:text-primary-foreground"} 
                             >
                               Start Planning <ArrowRight className="w-4 h-4 ml-1" />
                             </Button>
@@ -269,13 +269,13 @@ const Products = () => {
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-gradient mb-4">
             Not sure which product is right for you?
           </h2>
           <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
             Use our AI-powered portfolio analyzer to get personalized recommendations based on your goals and risk profile.
           </p>
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button variant='gredient' size="lg" className="">
             Try Portfolio Analyzer
           </Button>
         </div>

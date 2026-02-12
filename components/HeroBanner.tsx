@@ -34,8 +34,8 @@ const HeroBanner = () => {
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-secondary/10 rounded-full blur-3xl" />
         
         <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
-          Plan Better with{" "}
-          <span className="text-primary">Simple Financial Calculators</span>
+         
+          <span className="text-gradient"> Plan Better with Simple Financial Calculators</span>
         </h1>
         
         <p className="text-lg md:text-xl text-secondary font-medium mb-6">

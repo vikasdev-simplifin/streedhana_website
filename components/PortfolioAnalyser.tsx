@@ -62,13 +62,41 @@ const PortfolioAnalyser = () => {
           {analyserFeatures.map((feature) => (
             <div
               key={feature.title}
-              className="group bg-card border border-border rounded-2xl p-6 hover:border-secondary hover:shadow-medium transition-all duration-300"
+              className="
+  group
+  bg-card
+  border border-border
+  rounded-2xl p-6
+  transition-colors duration-300
+  hover:border-secondary
+  hover:shadow-medium
+"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0 group-hover:bg-secondary transition-colors duration-300">
+                {/* <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0 group-hover:bg-secondary transition-colors duration-300">
                   <feature.icon className="w-6 h-6 text-secondary group-hover:text-secondary-foreground transition-colors duration-300" />
+                </div> */}
+                <div
+                  className="
+    w-12 h-12 rounded-lg
+    bg-secondary/10
+    flex items-center justify-center shrink-0
+    transition-all duration-300
+    group-hover:bg-gradient-to-br
+    group-hover:from-[#0a4076]
+    group-hover:to-[#11d4c4]
+  "
+                >
+                  <feature.icon
+                    className="
+      w-6 h-6
+      text-secondary
+      transition-colors duration-300
+      group-hover:text-white
+    "
+                  />
                 </div>
-                
+
                 <div>
                   <h3 className="text-lg font-display font-bold text-foreground mb-2 flex items-center gap-2">
                     <span>{feature.emoji}</span> {feature.title}

@@ -1,5 +1,6 @@
 import FAQ from "@/components/FAQ";
 import Features from "@/components/Features";
+import GaolCart from "@/components/GaolCart";
 import Hero from "@/components/Hero";
 import HeroSection from "@/components/HeroSection";
 import PortfolioAnalyser from "@/components/PortfolioAnalyser";
@@ -14,6 +15,7 @@ export default function Home() {
       
       {/* <Hero /> */}
       <HeroSection />
+      <GaolCart />
       <Features />
       <SmartTools />
       <PortfolioAnalyser />

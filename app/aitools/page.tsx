@@ -1,6 +1,7 @@
 "use client";
 import HeroBanner from "@/components/HeroBanner";
 import ToolCard from "@/components/ToolCard";
+import { Button } from "@/components/ui/button";
 import {
   MessageSquare,
   Search,
@@ -78,7 +79,7 @@ const AITools = () => {
       {/* Tools Grid Section */}
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-gradient mb-3">
             Free AI Investment Tools
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
@@ -103,15 +104,18 @@ const AITools = () => {
       {/* Footer CTA */}
       <section className="bg-gradient-to-r from-primary/10 to-secondary/10 py-12">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-4">
+          <h3 className="text-xl md:text-2xl font-semibold text-gradient mb-4">
             Take Control of Your Financial Future
           </h3>
           <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
             Start using our free AI-powered tools today and make smarter investment decisions.
           </p>
-          <button className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
+          {/* <button className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
             Get Started Now
-          </button>
+          </button> */}
+          <Button variant='gredient' className="px-8 py-4 text-lg rounded-full font-medium hover:bg-gradient-to-br hover:from-indigo-600 hover:to-cyan-600 transition-colors duration-300 shadow-lg hover:shadow-xl">
+            Get Started Now
+          </Button>
         </div>
       </section>
     </div>

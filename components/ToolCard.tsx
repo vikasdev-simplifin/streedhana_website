@@ -44,21 +44,21 @@ const ToolCard = ({
       >
         <CardContent className="p-6 relative">
           {/* Hover gradient (desktop only) */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
+          {/* <div className="h-auto absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" /> */}
 
-          <div className="relative z-10">
+          <div className="relative z-10  h-auto">
             {/* Icon */}
             <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform duration-300">
               <Icon className="w-7 h-7 text-primary" />
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-semibold text-foreground mb-2 md:group-hover:text-primary transition-colors">
+            <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
               {title}
             </h3>
 
             {/* Description */}
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="h-auto text-sm text-muted-foreground leading-relaxed ">
               {description}
             </p>
 

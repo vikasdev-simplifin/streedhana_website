@@ -511,7 +511,7 @@ const MutualFundSakhiGinnie = () => {
                     <p className="font-medium">Integrity</p>
                   </div>
                   <div className="p-4">
-                    <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary flex items-center justify-center">
+                    <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary flex items-center justify-center">
                       <MessageCircle className="w-6 h-6 text-secondary-foreground" />
                     </div>
                     <p className="font-medium">Transparency</p>
