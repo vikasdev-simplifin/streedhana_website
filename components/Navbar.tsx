@@ -137,7 +137,7 @@ const Navbar = () => {
                 FAQ
               </Link>
               <Link
-                href="#about"
+                href="/about"
                 className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium px-3 py-2 rounded-lg hover:bg-primary/5"
               >
                 About Us
@@ -240,7 +240,7 @@ const Navbar = () => {
                 FAQ
               </Link>
               <Link
-                href="#about"
+                href="/about"
                 onClick={() => setIsOpen(false)}
                 className="px-2 py-3 text-gray-700 hover:text-primary transition-colors duration-150 font-medium rounded-lg hover:bg-primary/5"
               >
