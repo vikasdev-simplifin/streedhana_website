@@ -102,7 +102,7 @@ export default function HeroSlider() {
           >
             {slides.map((src, index) => (
               <SwiperSlide key={index}>
-                <div className="relative  aspect-[16/9] 
+                <div className="relative  aspect-[16/12] 
  w-full">
                   <Image
                     src={src}

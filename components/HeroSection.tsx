@@ -8,9 +8,9 @@ import HeroSlider from "./HeroSlider";
 export default function HeroSection() {
   return (
     <section className="bg-gradient-hero overflow-hidden md:px-10">
-      <div className="container mx-auto px-6 md:px-0 py-10">
+      <div className="container mx-auto px-6 md:px-0 py-10 lg:py-20">
 
-        <div className="grid items-center gap-12 lg:min-h-[78vh] lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16 lg:my-10">
 
           {/* Slider - First on Mobile, Right on Desktop */}
           <div className="order-1 lg:order-2 flex justify-center animate-slide-in">
