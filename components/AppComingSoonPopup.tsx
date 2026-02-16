@@ -22,7 +22,7 @@ export default function AppDownloadPopup() {
 
   return (
     <div className="fixed inset-0 z-[9999] bg-black/60 flex items-center justify-center p-4">
-      <div className="relative bg-gradient-to-r from-rose-50 to-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden">
+      <div className="relative bg-gradient-to-r from-rose-50 to-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden max-h-[80vh]">
 
         <button
           onClick={() => setOpen(false)}
@@ -38,21 +38,28 @@ export default function AppDownloadPopup() {
               Download our App!
             </h2>
 
-            <div>
-              <img 
-               src="/download-left.png"
-               alt="Download"
-              className="h-20 w-auto object-contain"
-              />
+            <div className="flex md:flex-col flex-row justify-between items-center">
+  
+              {/* Logo - show first on mobile */}
+              <div className="flex items-center order-1 md:order-2">
+                <img 
+                  src="/finallogo.png"  
+                  alt="StreeDhana Logo"
+                  className="h-24 w-auto object-contain"
+                />
+              </div>
+
+              {/* Download Image - show second on mobile */}
+              <div className="order-2 md:order-1">
+                <img 
+                  src="/download-left.png"
+                  alt="Download"
+                  className="h-20 w-auto object-contain"
+                />
+              </div>
+
             </div>
-        
-            <div className="flex items-center">
-              <img 
-                src="/finallogo.png"  
-                alt="StreeDhana Logo"
-                className="h-20 w-auto object-contain"
-              />
-            </div>
+
         
             <p className="text-destructive font-bold mb-6">
               Stop Overthinking, Start Investing.
@@ -61,7 +68,7 @@ export default function AppDownloadPopup() {
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="#"
-                className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[170px]"
+                className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[170px] max-w-[200px]"
               >
                 <img
                   src="/google-play.png"
@@ -80,7 +87,7 @@ export default function AppDownloadPopup() {
             
               <a
                 href="#"
-                className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[170px]"
+                className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl hover:scale-105 transition duration-300 min-w-[170px] max-w-[200px]"
               >
                 <img
                   src="/appstore.png"
@@ -106,7 +113,7 @@ export default function AppDownloadPopup() {
               <img
                 src="/girl-1.png"
                 alt="App Preview"
-                className="relative max-h-[320px] md:max-h-[380px] w-auto object-contain"
+                className="relative max-h-[280px] md:max-h-[380px] w-auto object-contain"
               />
             </div>
           </div>
