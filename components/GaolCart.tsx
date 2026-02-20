@@ -127,10 +127,10 @@ type GoalCard = {
 };
 
 const goalCards: GoalCard[] = [
-    { icon: ShieldCheck, label: "Gold Plan", sublabel: "Safety First, Wealth Next" },
-    { icon: GraduationCap, label: "My Child Education Plan", sublabel: "My Child, My Priority" },
-    { icon: Sunrise, label: "Retirement", sublabel: "A Future Where You Don’t Have to Ask." },
-    { icon: Sparkles, label: "Dreams", sublabel: "My Life, My Choices" },
+    { icon: ShieldCheck, label: "Safety First , Wealth Next", sublabel: "Gold Investment" },
+    { icon: GraduationCap, label: "My Child, My Priority", sublabel: "Child Future Investment Plan" },
+    { icon: Sunrise, label: "A Future Where You Don’t Have To Ask", sublabel: "Monthly Income Retirement Plan" },
+    { icon: Sparkles, label: "My Life, My Choices", sublabel: "DreamSecure Plan" },
 ];
 
 const GaolCart = () => {

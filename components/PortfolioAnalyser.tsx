@@ -41,10 +41,9 @@ const analyserFeatures = [
 
 const PortfolioAnalyser = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-teal-light/30 to-background">
+    <section className="py-6 bg-gradient-to-b from-teal-light/30 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-4xl mb-4 block">🌸</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4 text-gradient">
             Understand Your Portfolio Better
           </h2>

@@ -217,7 +217,7 @@ export default function PrivacyPolicyPage() {
           <p>In accordance with the DPDP Act, a Grievance Officer has been appointed.</p>
           <p><strong>Grievance Officer</strong></p>
           <p>StreeDhana – NextStep Financials Service Private Limited</p>
-          <p>📧 Email: support@streedhana.com</p>
+          <p>📧 Email: contact@streedhana.com</p>
           <p>If a grievance is not resolved, users may approach the Data Protection Board of India, as notified under the DPDP Act.</p>
         </PolicySection>
 

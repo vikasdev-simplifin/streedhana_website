@@ -18,7 +18,9 @@ import {
   BookOpen,
   Shield,
   FileText,
-  Award
+  Award,
+  Wallet,
+  TrendingUp
 } from "lucide-react";
 
 const MutualFundSakhiGinnie = () => {
@@ -27,7 +29,7 @@ const MutualFundSakhiGinnie = () => {
 
       
       {/* Hero Section */}
-      <section className="pt-28 pb-12 md:pt-36 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="pt-14 pb-12 md:pt-16 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6 ">
@@ -145,23 +147,23 @@ const MutualFundSakhiGinnie = () => {
       </section>
 
       {/* Eligibility & Details Tabs */}
-      <section className="py-12 md:py-16 bg-secondary/30">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="sakhi" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 gap-2 mb-8">
-              <TabsTrigger value="sakhi" className="text-xs sm:text-sm md:text-base py-2
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10">
+              <TabsTrigger value="sakhi" className="text-sm md:text-base
                 data-[state=active]:bg-white
                 data-[state=active]:text-foreground
                 data-[state=active]:shadow-sm
-                rounded-md">
+                rounded-md cursor-pointer">
                 <Heart className="w-4 h-4 mr-2" />
                 Become a Sakhi
               </TabsTrigger>
-              <TabsTrigger value="ginnie" className="text-xs sm:text-sm md:text-base py-2
+              <TabsTrigger value="ginnie" className="text-sm md:text-base
                 data-[state=active]:bg-white
                 data-[state=active]:text-foreground
                 data-[state=active]:shadow-sm
-                rounded-md">
+                rounded-md cursor-pointer">
                 <Sparkles className="w-4 h-4 mr-2" />
                 Become a Ginnie
               </TabsTrigger>

@@ -43,7 +43,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Anita Reddy",
+    name: "Anita Gupta",
     avatar: "AR",
     text: "Finally a platform that understands Indian women! The financial planning tools are exactly what I needed. My goal of saving for my daughter's education is now on track. Thank you StreeDhana!",
     rating: 5,

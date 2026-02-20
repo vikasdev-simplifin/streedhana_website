@@ -146,17 +146,29 @@ const Navbar = () => {
 
             {/* Desktop Buttons */}
             <div className="hidden md:flex items-center gap-3">
-              <Button 
-                variant="outline" 
-                className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-200 hover:scale-105 active:scale-95"
+  
+              {/* Distributor Login */}
+              <Button
+                variant="outline"
+                className="!border-primary !text-primary 
+                           hover:!bg-primary hover:!text-white 
+                           transition-all duration-300 
+                           hover:scale-105 active:scale-95"
               >
                 Distributor Login
               </Button>
-              <Button 
-                className="bg-primary text-white hover:bg-primary/90 transition-all duration-200 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+            
+              {/* Customer Login */}
+              <Button
+                className="!bg-primary !text-white 
+                           hover:!bg-primary hover:!text-primary 
+                           transition-all duration-300 
+                           hover:scale-105 active:scale-95 
+                           shadow-md hover:shadow-lg"
               >
                 Customer Login
               </Button>
+            
             </div>
 
             {/* Mobile Menu Button */}

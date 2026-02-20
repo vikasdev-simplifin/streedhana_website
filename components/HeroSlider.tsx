@@ -102,8 +102,7 @@ export default function HeroSlider() {
           >
             {slides.map((src, index) => (
               <SwiperSlide key={index}>
-                <div className="relative  aspect-[16/12] 
- w-full">
+                <div className="relative  aspect-[16/12] w-full">
                   <Image
                     src={src}
                     alt={`Dashboard ${index + 1}`}
@@ -138,7 +137,7 @@ export default function HeroSlider() {
                   alt={`Dashboard ${index + 1}`}
                   fill
                   sizes="100vw"
-                  className="object-cover"
+                  className="object-contain"
                   priority={index === 0}
                 />
               </div>

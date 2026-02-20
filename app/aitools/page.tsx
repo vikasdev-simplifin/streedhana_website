@@ -73,14 +73,14 @@ const tools = [
 
 const AITools = () => {
   return (
-    <div className="min-h-screen bg-background mt-24">
+    <div className="min-h-screen bg-background">
       <HeroBanner />
 
       {/* Tools Grid Section */}
-      <section className="container mx-auto px-4 py-12 md:py-16">
+      <section className="container mx-auto px-4 py-6 md:py-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gradient mb-3">
-            Free AI Investment Tools
+            AI Tools
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Explore our suite of intelligent tools designed to simplify your financial journey

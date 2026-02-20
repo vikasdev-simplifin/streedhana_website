@@ -121,7 +121,7 @@ export default function AboutPage(): JSX.Element {
           <div className="text-center">
             <div className="mt-4 relative w-full h-64">
               <Image
-                src="/about-illustration.png"
+                src="/graffiti.jpg"
                 alt="About Illustration"
                 fill
                 className="object-contain"
@@ -131,7 +131,7 @@ export default function AboutPage(): JSX.Element {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-16">
-        <h2 className="text-4xl font-semibold mb-12 text-gradient">
+        <h2 className="text-4xl text-center font-semibold mb-8 text-gradient">
           What We Do 
         </h2>
       
@@ -220,7 +220,7 @@ export default function AboutPage(): JSX.Element {
             <div className="grid md:grid-cols-3 gap-10 items-start">
               <div className="relative w-full h-92 rounded-2xl overflow-hidden bg-gray-200">
                 <Image
-                  src="/founder.jpg"
+                  src="/founder-1.jpg"
                   alt="Founder"
                   fill
                   className="object-contain"
@@ -278,12 +278,12 @@ export default function AboutPage(): JSX.Element {
           <CardContent className="p-8 space-y-4">
             <div className="grid md:grid-cols-3 gap-10 items-start">
               <div className="relative w-full h-96 rounded-2xl overflow-hidden bg-gray-200">
-                {/* <Image
-                  src=""
+                <Image
+                  src="/co-founder.jpg"
                   alt="Founder"
                   fill
                   className="object-contain"
-                /> */}
+                />
               </div>
       
               <div className="md:col-span-2 space-y-4">
@@ -376,26 +376,26 @@ export default function AboutPage(): JSX.Element {
             At StreeDhana, diversity and purpose form the foundation of our team. We are a collective of driven professionals and grassroots champions committed to building financial confidence for women in a rapidly evolving India. 
           </p>
         
-          <div className="grid md:grid-cols-3 gap-6 auto-rows-[220px]">
+          <div className="grid md:grid-cols-3 gap-6 auto-rows-[220px] object-contain">
             <div className="relative md:row-span-2 rounded-3xl overflow-hidden shadow-soft">
-              <Image src="/culture-1.jpg" alt="Team culture" fill className="object-cover" />
+              <Image src="/team-3.png" alt="Team culture" fill className="object-cover" />
             </div>
         
-            <div className="relative rounded-3xl overflow-hidden shadow-soft">
-              <Image src="/culture-2.png" alt="Team culture" fill className="object-cover" />
+            <div className="relative rounded-3xl overflow-hidden shadow-soft ">
+              <Image src="/team-cul-1.png" alt="Team culture" fill className="object-cover" />
             </div>
           
             <div className="relative md:row-span-2 rounded-3xl overflow-hidden shadow-soft">
-              <Image src="/culture-3.jpg" alt="Team culture" fill className="object-cover" />
+              <Image src="/team-cul.png" alt="Team culture" fill className="object-cover" />
             </div>
             
             <div className="relative rounded-3xl overflow-hidden shadow-soft">
-              <Image src="/culture-4.jpg" alt="Team culture" fill className="object-cover" />
+              <Image src="/team-mem-4.jpg" alt="Team culture" fill className="object-cover" />
             </div>
           
-            <div className="relative rounded-3xl overflow-hidden shadow-soft md:col-span-2 text-centre">
-              <Image src="/culture-5.png" alt="Team culture" fill className="object-cover" />
-            </div>
+            {/* <div className="relative rounded-3xl overflow-hidden shadow-soft md:col-span-2 text-centre">
+              <Image src="/team-mem-4.jpg" alt="Team culture" fill className="object-cover" />
+            </div> */}
           </div>
         </div>
       </section>

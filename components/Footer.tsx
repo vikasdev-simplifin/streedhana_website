@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FileText, ShieldCheck } from "lucide-react";
 import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -31,29 +32,49 @@ const Footer = () => {
             <div className="flex gap-4 mb-8">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center hover:scale-110 transition"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5 text-white" />
               </a>
+            
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center hover:scale-110 transition"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5 text-white" />
               </a>
+            
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 rounded-full bg-[#0A66C2] flex items-center justify-center hover:scale-110 transition"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5 text-white" />
               </a>
+            
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:scale-110 transition"
+              >
+                <FaWhatsapp className="w-5 h-5 text-white" />
+              </a>
+            
             </div>
 
             <div className="flex gap-3">
-              <Button variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-navy">
+              <Button variant="outline" className="bg-black border-white/30 text-white hover:scale-105 hover:text-black">
+                <img
+                  src="/google-play.png"
+                  alt="Google Play"
+                  className="h-10 w-8 object-contain"
+                />
                 Android App
               </Button>
-              <Button variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-navy">
+              <Button variant="outline" className="bg-black border-white/30 text-white hover:scale-105 hover:text-black">
+                <img
+                  src="/appstore.png"
+                  alt="App Store"
+                  className="h-10 w-8 object-contain"
+                />
                 iOS App
               </Button>
             </div>
@@ -109,7 +130,7 @@ const Footer = () => {
             <div className="flex items-start gap-3 text-white/70">
               <MapPin className="w-5 h-5 mt-1 shrink-0" />
               <div>
-                <p className="font-medium text-white">NEXTSTEP FINANCIALS SERVICE PRIVATE LIMITED</p>
+                <p className="font-medium text-white">NextStep Financials Service Pvt Ltd </p>
                 <p className="mt-2">Levana Cyber Heights</p>
                 <p>Unit No. 804B, 8th Floor, Vibhuti Khand</p>
                 <p>Gomti Nagar, Lucknow</p>
@@ -127,6 +148,8 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-white/10">
           <p className="text-xs text-white/50 leading-relaxed">
             <strong>Disclaimer:</strong> Mutual fund investments are subject to market risks, read all scheme related documents carefully before investing. Investment in securities market are subject to market risks, read all the related documents carefully before investing. StreeDhana is owned and operated by NextStep Financials Service Private Limited, providing Mutual Fund investing and Financial Literacy with AMFI certification.
+            <p>Logos and trademarks displayed are the property of their respective mutual fund companies and are used solely for informational and representation purposes. Their use does not imply any partnership, endorsement, or affiliation unless explicitly stated.</p>
+            <p>StreeDhana is owned by NextStep Financials Service Pvt. Ltd., a registered mutual fund distributor with a valid ARN.</p>
           </p>
         </div>
 

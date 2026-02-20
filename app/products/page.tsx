@@ -89,11 +89,11 @@ const goalBasedPlans = [
 ];
 
 const productCategories = [
-  { name: "Mutual Funds", active: true },
+  { name: "Trending Mutual Funds", active: true },
   { name: "Goal Based MF Investing", active: true },
   { name: "Insurance", upcoming: true },
   { name: "Loans", upcoming: true },
-  { name: "UPI", development: true },
+  { name: "Fixed Deposit", development: true },
 ];
 
 const Products = () => {
@@ -102,7 +102,7 @@ const Products = () => {
       
       
       {/* Hero Section */}
-      <section className="pt-28 pb-12 md:pt-36 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="pt-14 pb-12 md:pt-16 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
@@ -138,27 +138,48 @@ const Products = () => {
 
       {/* Main Content with Tabs */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center">
           <Tabs defaultValue="portfolios" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10">
-              <TabsTrigger value="portfolios" className="text-sm md:text-base
-                data-[state=active]:bg-white
-                data-[state=active]:text-foreground
-                data-[state=active]:shadow-sm
-                rounded-md cursor-pointer">
+            <TabsList className="inline-flex rounded-full p-1 mx-auto mb-10">
+          
+              <TabsTrigger
+                value="portfolios"
+                className="
+                  px-6 py-2 
+                  rounded-full 
+                  text-sm md:text-base 
+                  font-medium 
+                  transition-all
+                  data-[state=active]:bg-primary
+                  data-[state=active]:text-white
+                  data-[state=active]:shadow
+                  text-muted-foreground
+                "
+              >
                 <Wallet className="w-4 h-4 mr-2" />
                 MF Portfolios
               </TabsTrigger>
-              <TabsTrigger value="goals" className="text-sm md:text-base
-                data-[state=active]:bg-white
-                data-[state=active]:text-foreground
-                data-[state=active]:shadow-sm
-                rounded-md cursor-pointer">
+          
+              <TabsTrigger
+                value="goals"
+                className="
+                  px-6 py-2 
+                  rounded-full 
+                  text-sm md:text-base 
+                  font-medium 
+                  transition-all
+                  data-[state=active]:bg-primary
+                  data-[state=active]:text-white
+                  data-[state=active]:shadow
+                  text-muted-foreground
+                "
+              >
                 <TrendingUp className="w-4 h-4 mr-2" />
                 Goal Based
               </TabsTrigger>
+          
             </TabsList>
-
+          
             {/* Mutual Fund Portfolios Tab */}
             <TabsContent value="portfolios" className="space-y-8">
               <div className="text-center mb-8">
