@@ -119,9 +119,9 @@ export default function AboutPage(): JSX.Element {
           It begins with understanding.</p>
 
           <div className="text-center">
-            <div className="mt-4 relative w-full h-64">
+            <div className="mt-4 rounded-full relative max-w-full h-94">
               <Image
-                src="/graffiti.jpg"
+                src="/graffiti.png"
                 alt="About Illustration"
                 fill
                 className="object-contain"
