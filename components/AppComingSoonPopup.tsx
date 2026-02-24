@@ -22,7 +22,7 @@ export default function AppDownloadPopup() {
 
   return (
     <div className="fixed inset-0 z-[9999] bg-black/60 flex items-center justify-center p-4">
-      <div className="relative bg-gradient-to-r from-rose-50 to-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden max-h-[90vh]">
+  <div className="relative w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden bg-gradient-to-r from-[#3F9EB0] via-[#3E97AB] to-[#6cc3d5] px-6 md:px-10 py-8 md:py-10">
 
         <button
           onClick={() => setOpen(false)}
@@ -31,37 +31,33 @@ export default function AppDownloadPopup() {
           <X size={18} />
         </button>
 
-        <div className="grid md:grid-cols-2 gap-6 items-center p-6 md:p-8">
+        <div className="grid md:grid-cols-2 gap-6 items-center">
           <div>
   
-            <h2 className="text-2xl md:text-4xl font-bold text-rose-700 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Download our App!
             </h2>
 
-            <div className="flex md:flex-col flex-row justify-between items-center">
-  
-              {/* Logo - show first on mobile */}
-              <div className="flex items-center order-1 md:order-2">
-                <img 
-                  src="/finallogo.png"  
-                  alt="StreeDhana Logo"
-                  className="h-24 w-auto object-contain"
-                />
-              </div>
-
-              {/* Download Image - show second on mobile */}
+            <div className="flex flex-col md:flex-col items-center gap-6">
+            
               <div className="order-2 md:order-1">
                 <img 
                   src="/download-left.png"
                   alt="Download"
-                  className="h-20 w-auto object-contain"
+                  className="h-28 md:h-36 w-auto object-contain"
                 />
               </div>
-
+            
+              <div className="order-1 md:order-2 mb-4">
+                <img 
+                  src="/logo121.png"  
+                  alt="StreeDhana Logo"
+                  className="h-16 md:h-20 w-auto object-contain"
+                />
+              </div>
             </div>
 
-        
-            <p className="text-destructive font-bold mb-6">
+            <p className="text-2xl text-white font-bold mb-6">
               Stop Overthinking, Start Investing.
             </p>
         
@@ -76,10 +72,10 @@ export default function AppDownloadPopup() {
                   className="h-10 w-8 object-contain"
                 />
                 <div className="leading-tight">
-                  <p className="text-[8px] tracking-wide uppercase">
+                  <p className="text-[14px] uppercase">
                     Get it on
                   </p>
-                  <p className="text-[12px] font-semibold">
+                  <p className="text-[18px] font-semibold">
                     Google Play
                   </p>
                 </div>
@@ -95,10 +91,10 @@ export default function AppDownloadPopup() {
                   className="h-10 w-8 object-contain"
                 />
                 <div className="leading-tight">
-                  <p className="text-[8px] tracking-wide">
+                  <p className="text-[14px]">
                     Download on the
                   </p>
-                  <p className="text-[12px] font-semibold">
+                  <p className="text-[18px] font-semibold">
                     App Store
                   </p>
                 </div>
@@ -106,17 +102,15 @@ export default function AppDownloadPopup() {
             </div>
           </div>
   
-          <div className="relative flex justify-center items-center">
-            <div className="absolute w-72 h-72 bg-yellow-200 rounded-full blur-3xl opacity-40"></div>
-            
+          <div className="relative flex justify-center">
+            <div className="absolute w-72 h-72 bg-white rounded-full"></div>
               <img
-                src="/girl-1.png"
+                src="/app-img.png"
                 alt="App Preview"
-                className="relative max-h-[280px] md:max-h-[380px] w-auto object-contain"
+                className="relative max-h-[280px] md:max-h-[380px] w-auto object-cover"
               />
             </div>
           </div>
-
        </div>
     </div>
   );

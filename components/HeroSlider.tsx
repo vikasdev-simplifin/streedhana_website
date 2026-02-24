@@ -68,10 +68,10 @@ import "swiper/css/pagination";
 import Image from "next/image";
 
 const slides = [
-  "/banner1.png",
   "/banner2.png",
-  "/banner3.png",
-  "/banner4.png",
+  "/2k-sip.png",
+  "/sakhi.jpg",
+  "/5k-sip.png",
   "/banner5.png",
 ];
 
@@ -109,7 +109,7 @@ export default function HeroSlider() {
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
 
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
               </SwiperSlide>

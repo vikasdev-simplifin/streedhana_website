@@ -12,14 +12,14 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
-          <div className="bg-white p-2 rounded -lg">
+          <div className=" p-2 rounded -lg">
             {/* <h3 className="text-3xl font-display font-bold text-white mb-4">
               StreeDhana
             </h3>
             <p className="text-white/70 mb-6 max-w-md">
               Smart Mutual Fund For Big Dreams
             </p> */}
-            <a href="/" className="flex items-center mb-10">
+            {/* <a href="/" className="flex items-center mb-10">
               <Image
                 src="/streedhana-logo.png"
                 alt="StreeDhana Logo"
@@ -28,7 +28,7 @@ const Footer = () => {
                 className="object-contain"
                 priority
               />
-            </a>
+            </a> */}
             
             <div className="flex gap-4 mb-8">
               <a

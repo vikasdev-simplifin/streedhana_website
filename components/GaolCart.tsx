@@ -109,107 +109,104 @@
 
 // export default GaolCart;
 
-
 "use client";
-
-import {
-    ShieldCheck,
-    GraduationCap,
-    Sunrise,
-    Sparkles,
-    LucideIcon,
-} from "lucide-react";
+import Image from "next/image";
 
 type GoalCard = {
-    icon: LucideIcon;
-    label: string;
-    sublabel: string;
+  image: string;
+  label: string;
+  sublabel: string;
 };
 
 const goalCards: GoalCard[] = [
-    { icon: ShieldCheck, label: "Safety First , Wealth Next", sublabel: "Gold Investment" },
-    { icon: GraduationCap, label: "My Child, My Priority", sublabel: "Child Future Investment Plan" },
-    { icon: Sunrise, label: "A Future Where You Don’t Have To Ask", sublabel: "Monthly Income Retirement Plan" },
-    { icon: Sparkles, label: "My Life, My Choices", sublabel: "DreamSecure Plan" },
+  {
+    image: "/IMG_3599.PNG",
+    label: "Safety First , Wealth Next",
+    sublabel: "Gold Investment",
+  },
+  {
+    image: "/IMG_3595.PNG",
+    label: "My Child, My Priority",
+    sublabel: "Child Future Investment Plan",
+  },
+  {
+    image: "/IMG_3602.PNG",
+    label: "A Future Where You Don’t Have To Ask",
+    sublabel: "Monthly Income Retirement Plan",
+  },
+  {
+    image: "/IMG_3596.PNG",
+    label: "My Life, My Choices",
+    sublabel: "DreamSecure Plan",
+  },
 ];
 
 const GaolCart = () => {
-    return (
-        <section className="relative bg-gradient-hero-reverse pt-24 pb-20 overflow-hidden">
-            {/* Background Blur Elements */}
-            <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
+  return (
+    <section className="relative bg-gradient-hero-reverse pt-24 pb-20 overflow-hidden">
+      {/* Background Blur */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
 
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                    {goalCards.map((card, index) => {
-                        const Icon = card.icon;
-
-                        return (
-                            <div
-                                key={card.label}
-                                className="
-                  group
-                  rounded-2xl
-                  p-6
-                  text-center
-                  bg-white/60
-                  backdrop-blur-md
-                  border border-white/30
-                  shadow-md
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {goalCards.map((card) => (
+            <div
+              key={card.label}
+              className="
+                group
+                rounded-2xl
+                p-6
+                text-center
+                bg-white/60
+                backdrop-blur-md
+                border border-white/30
+                shadow-md
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:shadow-xl
+                hover:border-primary/40
+              "
+            >
+              <div
+                className="
+                  mx-auto
+                  flex
+                  items-center
+                  justify-center
+                  w-20
+                  h-20
+                  rounded-full
+                  bg-primary
                   transition-all
                   duration-300
-                  hover:-translate-y-2
-                  hover:shadow-xl
-                  hover:border-primary/40
+                  group-hover:scale-110
+                  group-hover:shadow-lg
                 "
-                            >
-                                {/* Icon Circle */}
+              >
+                <Image
+                  src={card.image}
+                  alt={card.label}
+                  width={56}
+                  height={42}
+                  className="object-contain"
+                />
+              </div>
 
-                                <div
-                                    className="
-                                                    mx-auto
-                                                    flex
-                                                    items-center
-                                                    justify-center
-                                                    w-14
-                                                    h-14
-                                                    rounded-full
-                                                    bg-primary
-                                                    transition-all
-                                                    duration-300
-                                                    group-hover:scale-110
-                                                    group-hover:shadow-lg
-                                                "
-                                >
-                                    <Icon
-                                        size={26}
-                                        strokeWidth={2}
-                                        className="
-      text-white
-      transition-all
-      duration-300
-    "
-                                    />
-                                </div>
+              <p className="mt-4 font-semibold text-lg text-foreground">
+                {card.label}
+              </p>
 
-
-                                {/* Title */}
-                                <p className="mt-4 font-semibold text-lg text-foreground">
-                                    {card.label}
-                                </p>
-
-                                {/* Subtitle */}
-                                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                                    {card.sublabel}
-                                </p>
-                            </div>
-                        );
-                    })}
-                </div>
+              <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                {card.sublabel}
+              </p>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default GaolCart;
