@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -149,22 +150,24 @@ const Navbar = () => {
   
               {/* Distributor Login */}
               <Button
+                onClick={()=>{window.location.href="https://next.streedhana.com/Login"}}
                 variant="outline"
                 className="!border-primary !text-primary 
                            hover:!bg-primary hover:!text-white 
                            transition-all duration-300 
-                           hover:scale-105 active:scale-95"
+                           hover:scale-105 active:scale-95 cursor-pointer"
               >
                 Distributor Login
               </Button>
             
               {/* Customer Login */}
               <Button
+               onClick={()=>{window.location.href="https://next.streedhana.com"}}
                 className="!bg-primary !text-white 
-                           hover:!bg-primary hover:!text-primary 
+                           hover:!bg-primary hover:!text-white 
                            transition-all duration-300 
                            hover:scale-105 active:scale-95 
-                           shadow-md hover:shadow-lg"
+                           shadow-md hover:shadow-lg cursor-pointer"
               >
                 Customer Login
               </Button>
