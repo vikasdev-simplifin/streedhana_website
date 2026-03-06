@@ -157,7 +157,7 @@ const Products = () => {
                   }`}
               >
                 <Wallet className="w-4 h-4 mr-2" />
-                MF Portfolios
+                Trending Mutual Funds
               </button>
 
               <button
