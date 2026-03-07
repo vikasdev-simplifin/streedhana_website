@@ -1,5 +1,6 @@
 import { Search, BarChart3, GitCompare, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const tools = [
   {
@@ -30,11 +31,10 @@ const tools = [
 
 const SmartTools = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-4xl mb-4 block">🧠</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4 text-gradient">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold leading-[1.2] pb-2 mb-4 text-gradient">
             Smart Tools to Plan & Manage Your Money
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -46,8 +46,9 @@ const SmartTools = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto cursor-pointer">
           {tools.map((tool, index) => (
-            <div
-              key={tool.title}
+            <Link
+              key={index}
+              href="https://next.streedhana.com"
               // className="group relative bg-card border border-border rounded-2xl p-8 hover:border-primary hover:shadow-glow transition-all duration-500"
               className="
   group relative
@@ -112,12 +113,12 @@ const SmartTools = () => {
 
               <Button 
                 variant="ghost" 
-                className="group/btn text-primary hover:text-primary hover:bg-coral-light p-0"
+                className="group/btn text-primary hover:text-primary hover:bg-coral-light p-0 cursor-pointer"
               >
                 Know More 
                 <ArrowRight className="ml-1 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </Button>
-            </div>
+            </Link>
           ))}
         </div>
 

@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,17 +48,16 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "unset";
+  //   }
+  //   return () => {
+  //     document.body.style.overflow = "unset";
+  //   };
+  // }, [isOpen]);
 
   return (
     <>
@@ -105,8 +105,8 @@ const Navbar = () => {
               </Link>
 
               {/* Tools Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-1 text-gray-700 hover:text-primary transition-colors duration-200 font-medium group focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg px-3 py-2 cursor-pointer">
+              <DropdownMenu modal={false}>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-gray-700 hover:text-primary transition-colors duration-200 font-medium group focus:outline-none rounded-lg px-3 py-2 cursor-pointer">
                   Tools 
                   <ChevronDown className="w-4 h-4 group-data-[state=open]:rotate-180 transition-transform duration-200" />
                 </DropdownMenuTrigger>
@@ -137,7 +137,7 @@ const Navbar = () => {
                 FAQ
               </Link>
               <Link
-                href="#about"
+                href="/about"
                 className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium px-3 py-2 rounded-lg hover:bg-primary/5"
               >
                 About Us
@@ -146,17 +146,31 @@ const Navbar = () => {
 
             {/* Desktop Buttons */}
             <div className="hidden md:flex items-center gap-3">
-              <Button 
-                variant="outline" 
-                className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-200 hover:scale-105 active:scale-95"
+  
+              {/* Distributor Login */}
+              <Button
+                onClick={()=>{window.location.href="https://next.streedhana.com/Login"}}
+                variant="outline"
+                className="!border-primary !text-primary 
+                           hover:!bg-primary hover:!text-white 
+                           transition-all duration-300 
+                           hover:scale-105 active:scale-95 cursor-pointer"
               >
                 Distributor Login
               </Button>
-              <Button 
-                className="bg-primary text-white hover:bg-primary/90 transition-all duration-200 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+            
+              {/* Customer Login */}
+              <Button
+               onClick={()=>{window.location.href="https://next.streedhana.com"}}
+                className="!bg-primary !text-white 
+                           hover:!bg-primary hover:!text-white 
+                           transition-all duration-300 
+                           hover:scale-105 active:scale-95 
+                           shadow-md hover:shadow-lg cursor-pointer"
               >
                 Customer Login
               </Button>
+            
             </div>
 
             {/* Mobile Menu Button */}
@@ -175,9 +189,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu - Overlay */}
+
         {isOpen && (
           <div 
-            className="lg:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40 animate-in fade-in duration-200"
+            className="lg:hidden fixed top-16 md:top-20 left-0 right-0 bottom-0 bg-black/20 backdrop-blur-sm z-30 animate-in fade-in duration-200"
             onClick={() => setIsOpen(false)}
           />
         )}
@@ -186,7 +201,7 @@ const Navbar = () => {
         <div
           ref={mobileMenuRef}
           className={cn(
-            "lg:hidden fixed top-16 md:top-20 left-0 right-0 bg-white shadow-xl z-40 transition-all duration-300 ease-out",
+            "lg:hidden fixed top-16 md:top-20 left-0 right-0 bg-white shadow-xl z-40 transition-all duration-300 ease-out max-h-[calc(100vh-5rem)] overflow-y-auto",
             isOpen
               ? "translate-y-0 opacity-100"
               : "-translate-y-4 opacity-0 pointer-events-none"
@@ -240,7 +255,7 @@ const Navbar = () => {
                 FAQ
               </Link>
               <Link
-                href="#about"
+                href="/about"
                 onClick={() => setIsOpen(false)}
                 className="px-2 py-3 text-gray-700 hover:text-primary transition-colors duration-150 font-medium rounded-lg hover:bg-primary/5"
               >
@@ -250,15 +265,17 @@ const Navbar = () => {
               {/* Mobile Buttons */}
               <div className="flex flex-col gap-3 pt-6 border-t border-gray-100">
                 <Button 
+                  onClick={()=>{window.location.href="https://next.streedhana.com/Login"}}
                   variant="outline" 
                   className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-200"
-                  onClick={() => setIsOpen(false)}
+                  // onClick={() => setIsOpen(false)}
                 >
                   Distributor Login
                 </Button>
                 <Button 
+                  onClick={()=>{window.location.href="https://next.streedhana.com"}}
                   className="w-full bg-primary text-white hover:bg-primary/90 transition-all duration-200 shadow-md"
-                  onClick={() => setIsOpen(false)}
+                  // onClick={() => setIsOpen(false)}
                 >
                   Customer Login
                 </Button>

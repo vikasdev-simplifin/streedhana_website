@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/form";
 import { FileText, Sparkles } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { createGinnieApplication } from "@/services/streedhana.service";
 
 const ginnieFormSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters").max(100),
@@ -82,21 +83,83 @@ const GinnieApplicationForm = ({ trigger }: GinnieApplicationFormProps) => {
     },
   });
 
-  const onSubmit = (data: GinnieFormValues) => {
-    console.log("Ginnie Application Submitted:", data);
-    toast({
-      title: "Application Submitted!",
-      description: "Thank you for applying to become a Mutual Fund Ginnie. We will contact you soon.",
-    });
-    setOpen(false);
-    form.reset();
+  const onSubmit = async (data: GinnieFormValues) => {
+    try {
+      const skills: string[] = [];
+
+      if (data.comfortableDigitalKyc)
+        skills.push("Digital KYC processes");
+
+      if (data.comfortableDocumentation)
+        skills.push("Documentation & compliance");
+
+      if (data.comfortableExplainingRisks)
+        skills.push("Explaining risks & processes clearly");
+
+      const payload = {
+        full_name: data.fullName,
+        dob: data.dateOfBirth,
+        mobile: data.mobileNumber,
+        email: data.emailId,
+        city: data.city,
+        state: data.state,
+        highest_qualification: data.highestQualification,
+
+        current_role_and_experience: data.currentRole || "",
+        bfsi_finance_experience: data.priorBfsiExperience || "",
+
+        amfi_certification_status:
+          data.certificationStatus === "certified"
+            ? "Certified"
+            : "Willing",
+
+        willing_to_get_certificate_in_days:
+          data.certificationStatus === "willing"
+            ? Number(data.certificationDays)
+            : null,
+
+        // ✅ Send ARN if certified
+        arn_number:
+          data.certificationStatus === "certified"
+            ? data.arnNumber || ""
+            : null,
+
+        skills_assessment: skills,
+
+        domain_name: "next.streedhana.com",
+      };
+
+      console.log("payload", payload);
+
+      const response = await createGinnieApplication(payload);
+      if(response.status === "success"){
+        toast({
+          title: "Application Submitted!",
+          description:
+            "Thank you for applying to become a Mutual Fund Ginnie.",
+        });
+
+        setOpen(false);
+        form.reset();
+      }
+    } catch (error: any) {
+      console.error("Ginnie submission error:", error);
+
+      toast({
+        title: "Submission Failed",
+        description:
+          error?.response?.data?.message ||
+          "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         {trigger || (
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground cursor-pointer">
             <FileText className="w-5 h-5 mr-2" />
             Apply to Become a Ginnie
           </Button>
