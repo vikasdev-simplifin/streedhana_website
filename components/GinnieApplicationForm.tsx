@@ -126,10 +126,7 @@ const GinnieApplicationForm = ({ trigger }: GinnieApplicationFormProps) => {
 
         skills_assessment: skills,
 
-        domain_name:
-          typeof window !== "undefined"
-            ? window.location.hostname
-            : "localhost",
+        domain_name: "next.streedhana.com",
       };
 
       console.log("payload", payload);

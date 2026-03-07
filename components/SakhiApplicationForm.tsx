@@ -111,7 +111,7 @@ const SakhiApplicationForm = ({ trigger }: SakhiApplicationFormProps) => {
 
         willing_to_conduct: data.sessionTypes.join(", "),
 
-        domain_name: "localhost",
+        domain_name: "next.streedhana.com",
       };
 
       console.log("payload", payload)
