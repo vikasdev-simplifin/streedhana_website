@@ -162,7 +162,7 @@ const GinnieApplicationForm = ({ trigger }: GinnieApplicationFormProps) => {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         {trigger || (
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground cursor-pointer">
             <FileText className="w-5 h-5 mr-2" />
             Apply to Become a Ginnie
           </Button>

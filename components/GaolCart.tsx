@@ -151,7 +151,8 @@ const GaolCart = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {goalCards.map((card) => (
-            <div
+            <a
+              href="https://next.streedhana.com"
               key={card.label}
               className="
                 group
@@ -201,7 +202,7 @@ const GaolCart = () => {
               <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
                 {card.sublabel}
               </p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

@@ -84,14 +84,13 @@ const MutualFundSakhiGinnie = () => {
                 <p className="text-sm text-muted-foreground border-l-4 border-primary/30 pl-4  ">
                   Role limited to financial literacy and investor awareness.
                 </p>
-                <div className="mt-auto">
-
+                <a href="tel:+919838094303" className="mt-auto cursor-pointer">
                   <Button variant="gredient" size="lg" className="w-full ">
                   <Phone className="w-5 h-5 mr-2" />
                   Talk to a Sakhi
                 </Button>
 
-                </div>
+                </a>
               </CardContent>
             </Card>
 
@@ -135,10 +134,12 @@ const MutualFundSakhiGinnie = () => {
                 </p>
                 <div className="mt-auto">
 
+                <a href="tel:+919838094303" className="cursor-pointer">
                 <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                   <Phone className="w-5 h-5 mr-2" />
                   Start Investing with Ginnie
                 </Button>
+                </a>
                 </div>
               </CardContent>
             </Card>

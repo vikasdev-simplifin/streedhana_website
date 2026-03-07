@@ -122,10 +122,10 @@ const Footer = () => {
                 <Mail className="w-5 h-5" />
                 contact@streedhana.com
               </a>
-              {/* <a href="tel:1800180180" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+              <a href="+919648883716" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
                 <Phone className="w-5 h-5" />
-                Toll Free: 1800 180 180
-              </a> */}
+                +91 96488 83716
+              </a>
             </div>
           </div>
 

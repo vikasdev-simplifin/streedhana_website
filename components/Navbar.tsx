@@ -48,17 +48,16 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "unset";
+  //   }
+  //   return () => {
+  //     document.body.style.overflow = "unset";
+  //   };
+  // }, [isOpen]);
 
   return (
     <>
@@ -106,8 +105,8 @@ const Navbar = () => {
               </Link>
 
               {/* Tools Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-1 text-gray-700 hover:text-primary transition-colors duration-200 font-medium group focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg px-3 py-2 cursor-pointer">
+              <DropdownMenu modal={false}>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-gray-700 hover:text-primary transition-colors duration-200 font-medium group focus:outline-none rounded-lg px-3 py-2 cursor-pointer">
                   Tools 
                   <ChevronDown className="w-4 h-4 group-data-[state=open]:rotate-180 transition-transform duration-200" />
                 </DropdownMenuTrigger>
@@ -190,9 +189,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu - Overlay */}
+
         {isOpen && (
           <div 
-            className="lg:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40 animate-in fade-in duration-200"
+            className="lg:hidden fixed top-16 md:top-20 left-0 right-0 bottom-0 bg-black/20 backdrop-blur-sm z-30 animate-in fade-in duration-200"
             onClick={() => setIsOpen(false)}
           />
         )}
@@ -201,7 +201,7 @@ const Navbar = () => {
         <div
           ref={mobileMenuRef}
           className={cn(
-            "lg:hidden fixed top-16 md:top-20 left-0 right-0 bg-white shadow-xl z-40 transition-all duration-300 ease-out",
+            "lg:hidden fixed top-16 md:top-20 left-0 right-0 bg-white shadow-xl z-40 transition-all duration-300 ease-out max-h-[calc(100vh-5rem)] overflow-y-auto",
             isOpen
               ? "translate-y-0 opacity-100"
               : "-translate-y-4 opacity-0 pointer-events-none"

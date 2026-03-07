@@ -186,19 +186,20 @@ const Products = () => {
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
                   Pre-defined investment funds with proven track records.{" "}
-                  <Link
-                    href="/terms-and-conditions"
+                  <a
+                    href="https://next.streedhana.com"
                     className="cursor-pointer font-semibold"
                   >
                     Click to start investing.
-                  </Link>
+                  </a>
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                {mutualFundPortfolios.map((portfolio) => (
+                {mutualFundPortfolios.map((portfolio, index) => (
+                  <a href="https://next.streedhana.com" key={index}>
                   <Card
-                    key={portfolio.name}
+                    // key={portfolio.name}
                     className="group hover:shadow-lg hover:border-primary/30 transition-all duration-300 cursor-pointer"
                   >
                     <CardContent className="p-5 md:p-6">
@@ -216,6 +217,7 @@ const Products = () => {
                       </h3>
                     </CardContent>
                   </Card>
+                  </a>
                 ))}
               </div>
             </div>
