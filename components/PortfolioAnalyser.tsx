@@ -41,10 +41,9 @@ const analyserFeatures = [
 
 const PortfolioAnalyser = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-teal-light/30 to-background">
+    <section className="py-6 bg-gradient-to-b from-teal-light/30 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-4xl mb-4 block">🌸</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4 text-gradient">
             Understand Your Portfolio Better
           </h2>
@@ -58,53 +57,59 @@ const PortfolioAnalyser = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto cursor-pointer">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto cursor-pointer items-stretch">
           {analyserFeatures.map((feature) => (
             <div
               key={feature.title}
               className="
-  group
-  bg-card
-  border border-border
-  rounded-2xl p-6
-  transition-colors duration-300
-  hover:border-secondary
-  hover:shadow-medium
-"
+                group
+                bg-card
+                border border-border
+                rounded-2xl p-6
+                transition-colors duration-300
+                hover:border-secondary
+                hover:shadow-medium
+                h-full
+                flex flex-col
+                min-h-[220px]
+              "
             >
-              <div className="flex items-start gap-4">
+
+              <div className="flex items-start gap-4 h-full">
                 {/* <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0 group-hover:bg-secondary transition-colors duration-300">
                   <feature.icon className="w-6 h-6 text-secondary group-hover:text-secondary-foreground transition-colors duration-300" />
                 </div> */}
                 <div
                   className="
-    w-12 h-12 rounded-lg
-    bg-secondary/10
-    flex items-center justify-center shrink-0
-    transition-all duration-300
-    group-hover:bg-gradient-to-br
-    group-hover:from-[#0a4076]
-    group-hover:to-[#11d4c4]
-  "
+                    w-12 h-12 rounded-lg
+                    bg-secondary/10
+                    flex items-center justify-center shrink-0
+                    transition-all duration-300
+                    group-hover:bg-gradient-to-br
+                    group-hover:from-[#0a4076]
+                    group-hover:to-[#11d4c4]
+                  "
                 >
                   <feature.icon
                     className="
-      w-6 h-6
-      text-secondary
-      transition-colors duration-300
-      group-hover:text-white
-    "
+                    w-6 h-6
+                    text-secondary
+                    transition-colors duration-300
+                    group-hover:text-white
+                  "
                   />
                 </div>
 
-                <div>
-                  <h3 className="text-lg font-display font-bold text-foreground mb-2 flex items-center gap-2">
-                    <span>{feature.emoji}</span> {feature.title}
+                <div className="flex-1 flex flex-col">
+                  <h3 className="text-lg font-display font-bold text-foreground mb-2">
+                    {feature.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
                     {feature.description}
                   </p>
                 </div>
+
               </div>
             </div>
           ))}

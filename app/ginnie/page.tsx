@@ -18,7 +18,9 @@ import {
   BookOpen,
   Shield,
   FileText,
-  Award
+  Award,
+  Wallet,
+  TrendingUp
 } from "lucide-react";
 
 const MutualFundSakhiGinnie = () => {
@@ -27,7 +29,7 @@ const MutualFundSakhiGinnie = () => {
 
       
       {/* Hero Section */}
-      <section className="pt-28 pb-12 md:pt-36 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="pt-14 pb-12 md:pt-16 md:pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6 ">
@@ -82,14 +84,13 @@ const MutualFundSakhiGinnie = () => {
                 <p className="text-sm text-muted-foreground border-l-4 border-primary/30 pl-4  ">
                   Role limited to financial literacy and investor awareness.
                 </p>
-                <div className="mt-auto">
-
+                <a href="tel:+919838094303" className="mt-auto cursor-pointer">
                   <Button variant="gredient" size="lg" className="w-full ">
                   <Phone className="w-5 h-5 mr-2" />
                   Talk to a Sakhi
                 </Button>
 
-                </div>
+                </a>
               </CardContent>
             </Card>
 
@@ -133,10 +134,12 @@ const MutualFundSakhiGinnie = () => {
                 </p>
                 <div className="mt-auto">
 
+                <a href="tel:+919838094303" className="cursor-pointer">
                 <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                   <Phone className="w-5 h-5 mr-2" />
                   Start Investing with Ginnie
                 </Button>
+                </a>
                 </div>
               </CardContent>
             </Card>
@@ -145,23 +148,23 @@ const MutualFundSakhiGinnie = () => {
       </section>
 
       {/* Eligibility & Details Tabs */}
-      <section className="py-12 md:py-16 bg-secondary/30">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="sakhi" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 gap-2 mb-8">
-              <TabsTrigger value="sakhi" className="text-xs sm:text-sm md:text-base py-2
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10">
+              <TabsTrigger value="sakhi" className="text-sm md:text-base
                 data-[state=active]:bg-white
                 data-[state=active]:text-foreground
                 data-[state=active]:shadow-sm
-                rounded-md">
+                rounded-md cursor-pointer">
                 <Heart className="w-4 h-4 mr-2" />
                 Become a Sakhi
               </TabsTrigger>
-              <TabsTrigger value="ginnie" className="text-xs sm:text-sm md:text-base py-2
+              <TabsTrigger value="ginnie" className="text-sm md:text-base
                 data-[state=active]:bg-white
                 data-[state=active]:text-foreground
                 data-[state=active]:shadow-sm
-                rounded-md">
+                rounded-md cursor-pointer">
                 <Sparkles className="w-4 h-4 mr-2" />
                 Become a Ginnie
               </TabsTrigger>

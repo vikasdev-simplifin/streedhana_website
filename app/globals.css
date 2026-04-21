@@ -142,13 +142,7 @@
 
 
 /* body { background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; } */
-.animate-scroll-right {
-  animation: scroll-right 20s linear infinite;
-}
 
-.animate-scroll-left {
-  animation: scroll-left 20s linear infinite;
-}
 
 /* @keyframes scroll-left {
   0% {
@@ -208,11 +202,11 @@
   }
 
   .animate-scroll-up {
-    animation: scroll-up 30s linear infinite;
+    animation: scroll-up 10s linear infinite;
   }
 
   .animate-scroll-down {
-    animation: scroll-down 30s linear infinite;
+    animation: scroll-down 10s linear infinite;
   }
 
   .pause-on-hover:hover {
@@ -222,11 +216,11 @@
 
 
 .animate-scroll-up {
-  animation: scroll-up 40s linear infinite;
+  animation: scroll-up 20s linear infinite;
 }
 
 .animate-scroll-down {
-  animation: scroll-down 40s linear infinite;
+  animation: scroll-down 20s linear infinite;
 }
 
 .pause-on-hover:hover {
@@ -253,7 +247,7 @@
   }
 
   .animate-scroll-left {
-    animation: scroll-left 40s linear infinite;
+    animation: scroll-left 30s linear infinite;
   }
 
   .animate-scroll-right {

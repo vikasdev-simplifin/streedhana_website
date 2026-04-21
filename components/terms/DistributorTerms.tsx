@@ -151,7 +151,7 @@ export default function DistributorTerms() {
           <section className="mt-4 space-y-4">
             <h2 className="text-xl font-semibold text-foreground">Governing Law</h2>
             <p className="mb-2">
-              These Terms & Conditions shall be governed by and construed in accordance with the <b>laws of India</b>, and courts having jurisdiction shall have exclusive authority.
+              These Terms & Conditions shall be governed by and construed in accordance with the <b>laws of India</b>, and courts having Lucknow jurisdiction shall have exclusive authority.
             </p>
           </section>
 

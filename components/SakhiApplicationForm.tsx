@@ -35,6 +35,7 @@ import {
 } from "@/components/ui/select";
 import { FileText, Heart } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { createSakhiApplication } from "@/services/streedhana.service";
 
 const sakhiFormSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters").max(100),
@@ -88,14 +89,63 @@ const SakhiApplicationForm = ({ trigger }: SakhiApplicationFormProps) => {
     },
   });
 
-  const onSubmit = (data: SakhiFormValues) => {
-    console.log("Sakhi Application Submitted:", data);
-    toast({
-      title: "Application Submitted!",
-      description: "Thank you for applying to become a Mutual Fund Sakhi. We will contact you soon.",
-    });
-    setOpen(false);
-    form.reset();
+  const onSubmit = async (data: SakhiFormValues) => {
+    try {
+      const payload = {
+        full_name: data.fullName,
+        dob: data.dateOfBirth,
+        mobile: data.mobileNumber,
+        email: data.emailId,
+        city: data.city,
+        district: data.district,
+        state: data.state,
+        highest_qualification: data.highestQualification,
+        current_occupation: data.currentOccupation,
+        language_known: data.languages
+          .split(",")
+          .map((lang) => lang.trim()),
+
+        reason_to_join: data.motivation,
+        is_experience_teaching_counselling_community:
+          data.hasExperience === "yes",
+
+        willing_to_conduct: data.sessionTypes.join(", "),
+
+        domain_name: "next.streedhana.com",
+      };
+
+      console.log("payload", payload)
+
+     const response = await createSakhiApplication(payload);
+      if(response.status === "success") {
+        toast({
+          title: "Application Submitted!",
+          description:
+            "Thank you for applying to become a Mutual Fund Sakhi. We will contact you soon.",
+        });
+
+        setOpen(false);
+        form.reset();
+      }else{
+        toast({
+          title: "Submission Failed",
+          description:
+            response?.message ||
+            "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error: any) {
+      console.error("Sakhi submission error:", error);
+
+      toast({
+        title: "Submission Failed",
+        description:
+          error?.response?.data?.message ||
+          "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
